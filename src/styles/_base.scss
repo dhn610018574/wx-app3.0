@@ -1,0 +1,662 @@
+@charset "utf-8";
+/* CSS Document */
+// 颜色设置
+$main-color: #fff;
+$border-color: #e9e9e9; //边框颜色
+$body-color: #333; //设置通用的字体颜色
+$body-bg: #f6f6f6; //设置通用的 body 背景色
+$gradient-start: #005FCF; //设置渐变开始颜色
+$gradient-end: #3692FD; //设置渐变结束颜色
+// 字体
+$font-family-zh: "Helvetica Neue", "PingFang SC";
+$font-family-en: Arial, sans-serif !default;
+
+// 请保证你的设计稿为750px宽，如果有其余字体大小，请在私有样式中设置
+.font-20 {
+  font-size: .2rem;
+}
+
+.font-24 {
+  font-size: .24rem;
+}
+
+.font-26 {
+  font-size: .26rem;
+}
+
+.font-28 {
+  font-size: .28rem;
+}
+
+.font-30 {
+  font-size: .3rem;
+}
+
+.font-32 {
+  font-size: .32rem;
+}
+
+.font-34 {
+  font-size: .34rem;
+}
+
+.font-36 {
+  font-size: .36rem;
+}
+
+.font-38 {
+  font-size: .38rem;
+}
+
+.font-40 {
+  font-size: .4rem;
+}
+
+// 盒子模型
+$box-model: border-box !default;
+// z-index
+$z-50: 50;
+$z-100: 100;
+$z-150: 150;
+$z-200: 200;
+$z-250: 250;
+$z-max: 999999; //为了应付某些插件z-index 值过高的问题
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0 none;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  
+  /* 在X5新内核Blink中，在排版页面的时候，会主动对字体进行放大，会检测页面中的主字体，当某一块字体在我们的判定规则中，认为字号较小，并且是页面中的主要字体，就会采取主动放大的操作。然而这不是我们想要的，可以采取给最大高度解决 */
+  max-height: 1000rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+em, strong, i {
+  font-style: normal;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+// 全局盒子模型设置
+* {
+  box-sizing: $box-model;
+}
+
+*:before,
+*:after {
+  box-sizing: $box-model;
+}
+
+// -webkit-tap-highlight-color 是一个 不规范的属性，它没有出现在 CSS 规范草案中。
+// 当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
+html, body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: $font-family-zh;
+  line-height: 1.5;
+  background-color: $body-bg;
+}
+
+// Links
+a {
+  text-decoration: none;
+  outline: none;
+  color:#000;
+  &:hover,
+  &:link,
+  &:focus {
+    text-decoration: none;
+  }
+  &:visited {
+  }
+}
+
+// 字体颜色
+//.main-color {
+//  color: $main-color;
+//}
+
+.color-white {
+  color: #fff;
+}
+
+.color333 {
+  color: #333
+}
+
+.color666 {
+  color: #666
+}
+
+.color999 {
+  color: #999
+}
+
+// 背景颜色
+.bg-white {
+  background-color: #fff
+}
+
+.bg-main {
+  background-color: $main-color
+}
+
+// 间隔
+.ma{
+  display: block;
+  margin: 0 auto;
+}
+.pt20 {
+  padding-top: .2rem;
+}
+
+.pt30 {
+  padding-top: .3rem;
+}
+
+.pt40 {
+  padding-top: .4rem;
+}
+
+.pt50 {
+  padding-top: .5rem;
+}
+
+.pt60 {
+  padding-top: .6rem;
+}
+
+.mb10 {
+  margin-bottom: .1rem;
+}
+
+.mb20 {
+  margin-bottom: .2rem;
+}
+
+.mb30 {
+  margin-bottom: .3rem;
+}
+
+.mb40 {
+  margin-bottom: .4rem;
+}
+.mb60{
+  margin-bottom: .6rem;
+}
+
+//padding margin组合设置
+.plr20 {
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+
+.plr30 {
+  padding-left: .3rem;
+  padding-right: .3rem;
+}
+
+.plr40 {
+  padding-left: .4rem;
+  padding-right: .4rem;
+}
+
+.ptb20 {
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+
+.ptb30 {
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+
+.ptb40 {
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+}
+
+.mtb32{
+  margin: .32rem auto;
+}
+.mtb30{
+  margin: .3rem auto;
+}
+
+// 设置block
+.block {
+  display: block;
+}
+
+.show {
+  display: inherit;
+}
+
+.hide {
+  display: none;
+}
+// 最外层页面设置
+.box {
+  max-width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 半透明弹层
+.alert-bg {
+  position: fixed;
+  z-index: $z-50;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .6);
+  display: none; //注意：默认隐藏！！
+}
+.alpha-bg {
+  position: fixed;
+  z-index: 100;
+  background: rgba(0, 0, 0, .7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+// 布局相关
+// 水平
+.hor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+// 水平居中
+.hor-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+// 垂直居中
+.ver-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+// 子元素内联垂直居中
+.center-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+// 子元素块联水平垂直居中
+.center-center-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+// 两边对齐
+.space-between {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// last-no-border
+.last-no-border:last-child {
+  border: none;
+}
+// 图片设置
+img {
+  max-width: 100%;
+}
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+// 这里主要应付 antd-mobile 的组件carousel 不能等比缩放的蛋疼问题
+.home-swipe {
+  height: 40.625vw;
+  max-height: 4rem;
+}
+
+.circle {
+  border-radius: 50%;
+}
+// 文本控制类
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+// 字符溢出隐藏
+  .text-overflow-one {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+// 字符超出一行溢出隐藏
+.text-overflow-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+// 字符超出两行溢出隐藏
+.text-overflow-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// 字符超出三行溢出隐藏
+.text-overflow-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+// 浮动控制
+//清除浮动
+.cf {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  zoom:1
+}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+.z-50 {
+  z-index: 50;
+}
+.z-100 {
+  z-index: 100;
+}
+.z-150 {
+  z-index: 150;
+}
+.z-200 {
+  z-index: 200;
+}
+.z-250 {
+  z-index: 250;
+}
+.z-max {
+  z-index: 999999;
+}
+.overflow-h {
+  overflow: hidden;
+}
+
+.scroll-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// 元素绝对定位的垂直水平居中
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.height100 {
+  height: 100%
+}
+
+.minheight110 {
+  min-height: 110%;
+}
+
+
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form,
+fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse; /*让表格边框细线*/
+  border-spacing: 0; /*清除边框间距*/
+}
+
+fieldset, img {
+  border: 0 none; /*有些浏览器默认这些标签有边框，所以要清除默认边框*/
+  display: block;
+}
+
+address, caption, cite, code, dfn, em, i, u, b, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+  /*清除标签默认文本样式和加粗*/
+}
+
+input, textarea {
+  outline: 0 none; /*去掉文本框的默认轮廓线*/
+}
+
+ol, ul {
+  list-style: none; /*清除列表默认样式*/
+}
+
+caption, th {
+  text-align: left; /*清除标签默认文本居中对齐*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; /*清除标题标签的默认样式*/
+}
+
+a {
+  text-decoration: none; /*大部分页面中的链接没有下划线*/
+}
+
+.clearfix:after {
+  height: 0;
+  content: " ";
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /*IE低版本浏览器不支持after伪类所以要加这一句*/
+}
+
+/*控制第一层容器都是撑满全屏*/
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+#app > :nth-child(1) {
+  height: 100%;
+}
+
+html {
+  min-width: 320px;
+}
+
+/*!*媒体查询*!*/
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 42.6666px !important;
+  }
+}
+
+/*大于等于320*/
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px !important;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px !important;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 53.3333px !important;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 55.2px !important;
+  }
+}
+
+@media screen and (min-width: 440px) {
+  html {
+    font-size: 58.6666px !important;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 64px !important;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  html {
+    font-size: 69.3333px !important;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  html {
+    font-size: 74.6666px !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 80px !important;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 85.3333px !important;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  html {
+    font-size: 90.6666px !important;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 96px !important;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 100px !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 102.4px !important;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size:106.6666px !important;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 128px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 136.5333px !important;
+  }
+}
+

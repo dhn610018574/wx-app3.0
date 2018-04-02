@@ -166,7 +166,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, "src"),
     hot: true,
     open: true,
-    host: "localhost",
+    host: "10.194.125.230",
     port: 8010,
     historyApiFallback: true
   }

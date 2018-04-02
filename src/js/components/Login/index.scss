@@ -1,0 +1,101 @@
+input,
+button {
+  border: 0;
+  -webkit-appearance: none;
+  outline: none;
+}
+.loginTop {
+  height: 4.1rem;
+  background: url("./image/home_top.png") no-repeat;
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.logogif {
+  width: 1.3rem;
+  height: 1.36rem;
+  margin: 20.1% auto;
+  background: url("./image/home_logogif.png") no-repeat;
+  background-size: 100%;
+}
+.back {
+  width: 0.4rem;
+  height: 0.4rem;
+  background: url("./image/home_back.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 9.2%;
+  left: 4%;
+}
+.loginInput {
+  padding: 0 .4rem;
+  margin-top: 3%;
+}
+input {
+  height: 0.34rem;
+  line-height: 0.34rem;
+  font-size: 0.32rem;
+  display: block;
+  cursor: pointer;
+  flex: 1;
+}
+input:focus{
+  color: #333;
+}
+input::-webkit-input-placeholder{
+  color: #bbb;
+}
+.phone,
+.password {
+  position: relative;
+  height: 1.12rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+.phoneIcon,
+.passwordIcon {
+  width: 0.44rem;
+  height: 0.44rem;
+  background: url("./image/home_phone.png") no-repeat;
+  background-size: 100%;
+  margin-right: 0.3rem;
+}
+.passwordIcon {
+  background: url("./image/home_psw.png") no-repeat;
+  background-size: 100%;
+}
+.clearIcon {
+  width: 0.32rem;
+  height: 0.32rem;
+  background: url("./image/home_delete.png") no-repeat;
+  background-size: 100%;
+  display: none;
+}
+button {
+  height: 0.92rem;
+  line-height: 0.92rem;
+  width: 6.7rem;
+  margin: 0.6rem auto;
+  color: #fff;
+  background-color: #fb4d3a;
+  text-align: center;
+  border-radius: 0.1rem;
+  font-size: 0.32rem;
+}
+.register {
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  display: block;
+  font-size: 0.28rem;
+  color: #fd8375;
+}
+.footer{
+  width: 1.4rem;
+  height: .46rem;
+  background: url('./image/home_logo.png') no-repeat;
+  background-size: 100%;
+  margin: 1.86rem auto .5rem;
+}
