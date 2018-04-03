@@ -42,10 +42,9 @@ export default class Login extends Component {
       this.props.onPasswordInputBlur(e.target.value);
     }
   }
-
   render() {
     return (
-      <div className="login">
+      <div className={styles.login}>
         <div className={styles.loginTop}>
           <div className={styles.logogif} />
           <div className={styles.back} />

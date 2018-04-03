@@ -5,6 +5,8 @@ const svgDirs = [
   require.resolve("antd-mobile").replace(/warn\.js$/, ""), // 1. 属于 antd-mobile 内置 svg 文件
   path.resolve(__dirname, "src/images/svg") // 2. 自己私人的 svg 存放目录
 ];
+var proxy = require('http-proxy-middleware')
+const context = [`/auth/login`]
 module.exports = {
   mode:'development',
   devtool: "cheap-module-source-map",
@@ -166,8 +168,16 @@ module.exports = {
     contentBase: path.resolve(__dirname, "src"),
     hot: true,
     open: true,
-    host: "10.194.125.230",
+    host: "localhost",
     port: 8010,
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy:[
+      {
+        context: context,
+        target: 'http://10.194.11.227:8080/webp2p_interface_mysql',
+        changeOrigin: true,
+        secure: false
+  }
+    ]
   }
 };

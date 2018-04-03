@@ -1,0 +1,23 @@
+.header{
+  height: .88rem;
+  background-color: #fff;
+  position: relative;
+  margin-bottom: .16rem;
+}
+.headerBack{
+  width: .4rem;
+  height: .4rem;
+  background: url('./image/header_back.png') no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -.2rem;
+  left: .3rem;
+}
+.title{
+  color: #333;
+  text-align: center;
+  font-size: .36rem;
+  line-height: .88rem;
+  flex: 1;
+}

@@ -1,0 +1,31 @@
+@import './mixins.scss';
+body{
+  background-color: #f6f6f6;
+}
+input,
+button {
+  border: 0;
+  -webkit-appearance: none;
+  outline: none;
+}
+button {
+  display: block;
+  height: 0.92rem;
+  line-height: 0.92rem;
+  width: 6.7rem;
+  margin: 0.6rem auto;
+  color: #fff;
+  background-color: #fb4d3a;
+  text-align: center;
+  border-radius: 0.1rem;
+  font-size: 0.32rem;
+}
+input:focus{
+  color: #333;
+}
+input::-webkit-input-placeholder{
+  color: #bbb;
+}
+p,div,h1,h2,h3,h4,h5,h6,i,e,em,b,a{
+  font-size: .28rem;
+}

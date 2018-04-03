@@ -8,6 +8,7 @@ import {store} from './js/store'
 injectTapEventPlugin();
 require("es6-promise/auto");
 require("whatwg-fetch");
+global.CRFFetch = require('./js/utils/ajax')
 if (typeof Object.assign !== "function") {
   Object.assign = require("object-assign");
 }

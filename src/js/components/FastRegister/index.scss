@@ -1,0 +1,75 @@
+.forgetPassword{
+  background-color: #f6f6f6;
+}
+.verifyInput{
+  background-color: #fff;
+  padding-left: .3rem;
+}
+.tel,.verify{
+  height: 1.12rem;
+  padding: .4rem .3rem .4rem 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.verify{
+  border-bottom: 0;
+}
+.clearIcon{
+  width: .32rem;
+  height: .32rem;
+  background: url('./image/forget_delete.png') no-repeat;
+  background-size: 100%;
+  margin-right: .3rem;
+}
+input,button{
+  border: 0;
+  outline: none;
+  -webkit-appearance: none;
+}
+input{
+  flex: 1;
+}
+input:focus{
+  color: #333;
+}
+input::-webkit-input-placeholder{
+  color: #bbb;
+}
+.verifyBtn{
+  width: 1.98rem;
+  height: .56rem;
+  border-radius: 2rem;
+  border: 1px solid #FBB203;
+  color: #F5A623;
+  text-align: center;
+  line-height: .5rem;
+  font-size: .32rem;
+  background-color: #fff;
+}
+.protocol{
+  font-size: .28rem;
+  line-height: .4rem;
+  color: #999;
+  margin: .4rem 0;
+  padding-left: .8rem;
+  vertical-align: middle;
+}
+.proto{
+  display: inline-block;
+  color: #FD8375;
+}
+.protocolList{
+  display: inline-block;
+}
+.choose{
+  display: inline-block;
+  vertical-align: middle;
+  width: .32rem;
+  height: .32rem;
+  background: url('./image/forget_normal.png') no-repeat;
+  background-size: 100%;
+  margin-left: -.52rem;
+  margin-right: .2rem;
+}

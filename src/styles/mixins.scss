@@ -1,0 +1,21 @@
+@define-mixin btn
+$width:auto,
+$color: #fff,
+$background-color: #fb4d3a,
+$border-radius: 0.1rem,
+$font-size: 0.32rem,
+$height: 0.92rem,
+$line-height: 0.92rem,
+$display: block,
+{
+  width: $width;
+  color: $color;
+  background-color: $background-color;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  border:none;
+  -webkit-appearance: none
+}
